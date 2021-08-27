@@ -41,7 +41,7 @@ export default function LendWithdrawAction({ pair }: any): JSX.Element {
       pair.currentUserAssetAmount.value.lt(value.toBigNumber(pair.asset.tokenInfo.decimals)),
       i18n._(
         t`Please make sure your ${
-          useBento ? 'BentoBox' : 'wallet'
+          useBento ? 'Big Bank' : 'wallet'
         } balance is sufficient to withdraw and then try again.`
       ),
       true
