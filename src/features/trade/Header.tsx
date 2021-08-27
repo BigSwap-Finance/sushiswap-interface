@@ -39,7 +39,7 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
     <div className="flex items-center justify-between mb-4 space-x-3">
       <div className="grid grid-cols-3 rounded p-3px bg-dark-800 h-[46px]">
         <NavLink
-          activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-blue hover:from-blue hover:to-blue"
+          activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-blue to-blue hover:from-blue hover:to-blue"
           href={{
             pathname: '/swap',
             query: getQuery(input, output),
@@ -50,7 +50,7 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
           </a>
         </NavLink>
         <NavLink
-          activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-blue hover:from-blue hover:to-blue"
+          activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-blue to-blue hover:from-blue hover:to-blue"
           href={{
             pathname: '/limit-order',
             query: getQuery(input, output),
@@ -61,7 +61,7 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
           </a>
         </NavLink>
         <NavLink
-          activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-blue hover:from-blue hover:to-blue"
+          activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-blue to-blue hover:from-blue hover:to-blue"
           href={`/${!isRemove ? 'add' : 'remove'}${input ? `/${currencyId(input)}` : ''}${
             output ? `/${currencyId(output)}` : ''
           }`}
