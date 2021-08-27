@@ -33,11 +33,11 @@ function Lend() {
   return fullPairs ? (
     <>
       <Head>
-        <title>Lend | Sushi</title>
+        <title>Lend | BigSwap</title>
         <meta
           key="description"
           name="description"
-          content="Kashi is a lending and margin trading platform, built upon BentoBox, which allows for anyone to create customized and gas-efficient markets for lending, borrowing, and collateralizing a variety of DeFi tokens, stable coins, and synthetic assets."
+          content="Big Vault is a lending and margin trading platform, built upon Big Bank, which allows for anyone to create customized and gas-efficient markets for lending, borrowing, and collateralizing a variety of DeFi tokens, stable coins, and synthetic assets."
         />
       </Head>
       <Card className="h-full bg-dark-900" header={<MarketHeader type="Lending" lists={[pairs, positions]} />}>
