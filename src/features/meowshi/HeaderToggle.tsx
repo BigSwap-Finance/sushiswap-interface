@@ -22,7 +22,7 @@ const HeaderToggle: FC<HeaderToggleProps> = ({ meowshiState }) => {
         <RadioGroup.Option
           value={true}
           className={({ checked }) =>
-            classNames('px-8 py-2 rounded', `${checked ? 'bg-gradient-to-r from-blue to-pink' : ''}`)
+            classNames('px-8 py-2 rounded', `${checked ? 'bg-gradient-to-r from-blue to-white' : ''}`)
           }
         >
           {({ checked }) => (
@@ -34,7 +34,7 @@ const HeaderToggle: FC<HeaderToggleProps> = ({ meowshiState }) => {
         <RadioGroup.Option
           value={false}
           className={({ checked }) =>
-            classNames('px-8 py-2 rounded', `${checked ? 'bg-gradient-to-r from-blue to-pink' : ''}`)
+            classNames('px-8 py-2 rounded', `${checked ? 'bg-gradient-to-r from-blue to-white' : ''}`)
           }
         >
           {({ checked }) => (
