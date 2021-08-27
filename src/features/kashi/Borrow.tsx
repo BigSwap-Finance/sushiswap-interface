@@ -349,7 +349,7 @@ export default function Borrow({ pair }: BorrowProps) {
       <div className="mt-6 mb-4 text-3xl text-high-emphesis">Borrow {pair.asset.tokenInfo.symbol}</div>
 
       <SmartNumberInput
-        color="white"
+        color="blue"
         token={pair.collateral}
         value={collateralValue}
         setValue={setCollateralValue}
@@ -363,7 +363,7 @@ export default function Borrow({ pair }: BorrowProps) {
       />
 
       <SmartNumberInput
-        color="white"
+        color="blue"
         token={pair.asset}
         value={borrowValue}
         setValue={setBorrowValue}
@@ -388,7 +388,7 @@ export default function Borrow({ pair }: BorrowProps) {
 
       {borrowValueSet && (
         <ExchangeRateCheckBox
-          color="white"
+          color="blue"
           pair={pair}
           updateOracle={updateOracle}
           setUpdateOracle={setUpdateOracle}
@@ -403,7 +403,7 @@ export default function Borrow({ pair }: BorrowProps) {
               <Button
                 variant="outlined"
                 size="xs"
-                color="white"
+                color="blue"
                 key={i}
                 onClick={() => {
                   onMultiply(multipler)
