@@ -45,7 +45,7 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
             query: getQuery(input, output),
           }}
         >
-          <a className="flex items-center justify-center px-4 text-base font-medium text-center rounded-md text-secondary hover:text-high-emphesis ">
+          <a className="flex items-center justify-center px-4 text-high-emphesis font-medium text-center rounded-md text-secondary hover:text-high-emphesis ">
             {i18n._(t`Swap`)}
           </a>
         </NavLink>
@@ -56,7 +56,7 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
             query: getQuery(input, output),
           }}
         >
-          <a className="flex items-center justify-center px-4 text-base font-medium text-center rounded-md text-secondary hover:text-high-emphesis">
+          <a className="flex items-center justify-center px-4 text-high-emphesis font-medium text-center rounded-md text-secondary hover:text-high-emphesis">
             {i18n._(t`Limit`)}
           </a>
         </NavLink>
@@ -66,7 +66,7 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
             output ? `/${currencyId(output)}` : ''
           }`}
         >
-          <a className="flex items-center justify-center px-4 text-base font-medium text-center rounded-md text-secondary hover:text-high-emphesis">
+          <a className="flex items-center justify-center px-4 text-high-emphesis font-medium text-center rounded-md text-secondary hover:text-high-emphesis">
             {i18n._(t`Liquidity`)}
           </a>
         </NavLink>
