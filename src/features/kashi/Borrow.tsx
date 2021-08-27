@@ -349,7 +349,7 @@ export default function Borrow({ pair }: BorrowProps) {
       <div className="mt-6 mb-4 text-3xl text-high-emphesis">Borrow {pair.asset.tokenInfo.symbol}</div>
 
       <SmartNumberInput
-        color="pink"
+        color="white"
         token={pair.collateral}
         value={collateralValue}
         setValue={setCollateralValue}
@@ -363,7 +363,7 @@ export default function Borrow({ pair }: BorrowProps) {
       />
 
       <SmartNumberInput
-        color="pink"
+        color="white"
         token={pair.asset}
         value={borrowValue}
         setValue={setBorrowValue}
@@ -378,7 +378,7 @@ export default function Borrow({ pair }: BorrowProps) {
       {collateralValueSet && (
         <SwapCheckbox
           trade={trade}
-          color="pink"
+          color="white"
           swap={swap}
           setSwap={setSwap}
           title={`Swap borrowed ${pair.asset.tokenInfo.symbol} for ${pair.collateral.tokenInfo.symbol} collateral`}
@@ -388,7 +388,7 @@ export default function Borrow({ pair }: BorrowProps) {
 
       {borrowValueSet && (
         <ExchangeRateCheckBox
-          color="pink"
+          color="white"
           pair={pair}
           updateOracle={updateOracle}
           setUpdateOracle={setUpdateOracle}
@@ -403,7 +403,7 @@ export default function Borrow({ pair }: BorrowProps) {
               <Button
                 variant="outlined"
                 size="xs"
-                color="pink"
+                color="white"
                 key={i}
                 onClick={() => {
                   onMultiply(multipler)
@@ -449,7 +449,7 @@ export default function Borrow({ pair }: BorrowProps) {
       )}
 
       <KashiApproveButton
-        color="pink"
+        color="blue"
         content={(onCook: any) => (
           <TokenApproveButton value={collateralValue} token={collateralToken} needed={!useBentoCollateral}>
             <Button onClick={() => onCook(pair, onExecute)} disabled={actionDisabled}>
