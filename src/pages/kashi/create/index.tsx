@@ -157,8 +157,8 @@ function Create() {
   return (
     <>
       <Head>
-        <title>Create Lending Pair | Kashi by Sushi</title>
-        <meta key="description" name="description" content="Create Lending Pair on Kashi by Sushi" />
+        <title>Create Lending Pair | Big Vault by BigSwap</title>
+        <meta key="description" name="description" content="Create Lending Pair on Big Vault by Big Swap" />
       </Head>
       <Card
         className="h-full bg-dark-900"
@@ -217,7 +217,7 @@ const CreateLayout = ({ children }) => {
         <Card
           className="h-full bg-dark-900"
           backgroundImage="/deposit-graphic.png"
-          title={i18n._(t`Create a new Kashi Market`)}
+          title={i18n._(t`Create a new Big Vault Market`)}
           description={i18n._(
             t`If you want to supply to a market that is not listed yet, you can use this tool to create a new pair.`
           )}
