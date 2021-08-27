@@ -12,7 +12,7 @@ function MISO() {
     <>
       <Head>
         <title>MISO | Sushi</title>
-        <meta key="description" name="description" content="MISO by Sushi, an initial Sushi offering on steroids ..." />
+        <meta key="description" name="description" content="New Born by BigSwap, an initial BigSwap offering on steroids ..." />
       </Head>
       <div
         className="flex flex-col w-full"
@@ -108,16 +108,16 @@ function MISO() {
 
               <Article
                 title={`How do I participate?`}
-                content={`The auction receives $SUSHI as its payment token currency. Go to auction page, 
-                          commit the amount of $SUSHI you’d like and claim your purchase after the 
+                content={`The auction receives $BGSP as its payment token currency. Go to auction page, 
+                          commit the amount of $BGSP you’d like and claim your purchase after the 
                           auction finishes.`}
               />
 
               <Article
                 title={`Learn more about MISO`}
                 content={`MISO is a suite of open-source smart contracts created to ease the process of launching 
-                          a new project on the SushiSwap exchange. MISO aims to drive new capital and trade to the exchange 
-                          by increasing the attractiveness of SushiSwap as a place for token creators and communities to launch 
+                          a new project on the BigSwap exchange. New Born aims to drive new capital and trade to the exchange 
+                          by increasing the attractiveness of BigSwap as a place for token creators and communities to launch 
                           new project tokens.`}
               />
             </div>
