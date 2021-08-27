@@ -238,7 +238,7 @@ export default function Stake() {
                       className={`
                         py-1 px-4 md:py-1.5 md:px-7 rounded
                         text-xs md:text-sm font-medium md:font-bold text-dark-900
-                        bg-light-yellow hover:bg-opacity-90`}
+                        bg-blue hover:bg-opacity-90`}
                     >
                       {i18n._(t`View Stats`)}
                     </a>
@@ -286,8 +286,8 @@ export default function Stake() {
                   <p className="font-bold text-large md:text-2xl text-high-emphesis">
                     {activeTab === 0 ? i18n._(t`Stake BGSP`) : i18n._(t`Unstake`)}
                   </p>
-                  <div className="border-gradient-r-pink-red-light-brown-dark-pink-red border-transparent border-solid border rounded-3xl px-4 md:px-3.5 py-1.5 md:py-0.5 text-high-emphesis text-xs font-medium md:text-base md:font-normal">
-                    {`1 xSUSHI = ${xSushiPerSushi.toFixed(4)} BGSP`}
+                  <div className="border-gradient-r-blue border-transparent border-solid border rounded-3xl px-4 md:px-3.5 py-1.5 md:py-0.5 text-high-emphesis text-xs font-medium md:text-base md:font-normal">
+                    {`1 xBGSP = ${xSushiPerSushi.toFixed(4)} BGSP`}
                   </div>
                 </div>
 
@@ -331,7 +331,7 @@ export default function Stake() {
                         <p className="text-base font-bold">{formattedBalance}</p>
                       </div>
                       <button
-                        className="px-2 py-1 ml-3 text-xs font-bold border pointer-events-auto focus:outline-none focus:ring hover:bg-opacity-40 md:bg-cyan-blue md:bg-opacity-30 border-secondary md:border-cyan-blue rounded-2xl md:py-1 md:px-3 md:ml-4 md:text-sm md:font-normal md:text-cyan-blue"
+                        className="px-2 py-1 ml-3 text-xs font-bold border pointer-events-auto focus:outline-none focus:ring hover:bg-opacity-40 md:bg-cyan-blue md:bg-opacity-30 border-secondary md:border-cyan-blue rounded-2xl md:py-1 md:px-3 md:ml-4 md:text-sm md:font-normal md:text-white"
                         onClick={handleClickMax}
                       >
                         {i18n._(t`MAX`)}
@@ -399,7 +399,7 @@ export default function Stake() {
                       <p className="text-sm font-bold md:text-lg text-high-emphesis">
                         {xSushiBalance ? xSushiBalance.toSignificant(4) : '-'}
                       </p>
-                      <p className="text-sm md:text-base text-primary">xSUSHI</p>
+                      <p className="text-sm md:text-base text-primary">xBGSP</p>
                     </div>
                   </div>
                 </div>
