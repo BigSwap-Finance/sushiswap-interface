@@ -16,7 +16,7 @@ function MarketHeader({ type = 'Borrow', lists }: any) {
 
   return (
     <Card.Header
-      className={classNames('border-b-8', type === 'Borrow' ? 'bg-dark-pink border-white' : 'bg-dark-blue border-blue')}
+      className={classNames('border-b-8', type === 'Borrow' ? 'bg-dark-whitek border-white' : 'bg-dark-white border-white')}
     >
       <div className="flex flex-col items-center justify-between w-full md:flex-row">
         <div className="flex items-center">
