@@ -115,7 +115,7 @@ function AppBar(): JSX.Element {
                   <div className="flex items-center justify-between w-full space-x-2 sm:justify-end">
                     {chainId && [ChainId.MAINNET].includes(chainId) && library && library.provider.isMetaMask && (
                       <>
-                        <QuestionHelper text={i18n._(t`Add xSUSHI to your MetaMask wallet`)}>
+                        <QuestionHelper text={i18n._(t`Add xBGSP to your MetaMask wallet`)}>
                           <div
                             className="hidden p-0.5 rounded-md cursor-pointer sm:inline-flex bg-dark-900 hover:bg-dark-800"
                             onClick={() => {
@@ -137,7 +137,7 @@ function AppBar(): JSX.Element {
                                   })
                                   .then((success) => {
                                     if (success) {
-                                      console.log('Successfully added XSUSHI to MetaMask')
+                                      console.log('Successfully added XBGSP to MetaMask')
                                     } else {
                                       throw new Error('Something went wrong.')
                                     }
@@ -161,7 +161,7 @@ function AppBar(): JSX.Element {
 
                     {chainId && chainId in SUSHI_ADDRESS && library && library.provider.isMetaMask && (
                       <>
-                        <QuestionHelper text={i18n._(t`Add SUSHI to your MetaMask wallet`)}>
+                        <QuestionHelper text={i18n._(t`Add BGSP to your MetaMask wallet`)}>
                           <div
                             className="hidden rounded-md cursor-pointer sm:inline-flex bg-dark-900 hover:bg-dark-800 p-0.5"
                             onClick={() => {
@@ -183,7 +183,7 @@ function AppBar(): JSX.Element {
                                   })
                                   .then((success) => {
                                     if (success) {
-                                      console.log('Successfully added SUSHI to MetaMask')
+                                      console.log('Successfully added BGSP to MetaMask')
                                     } else {
                                       throw new Error('Something went wrong.')
                                     }
