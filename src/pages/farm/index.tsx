@@ -77,7 +77,7 @@ export default function Farm(): JSX.Element {
     useOnePrice(),
   ]
 
-  const blocksPerDay = 86400 / Number(averageBlockTime)
+  const blocksPerDay = 87500 / Number(averageBlockTime)
 
   const map = (pool) => {
     // TODO: Account for fees generated in case of swap pairs, and use standard compounding
@@ -96,7 +96,7 @@ export default function Farm(): JSX.Element {
 
     const pair = swapPair || kashiPair
 
-    const blocksPerHour = 3600 / averageBlockTime
+    const blocksPerHour = 3750 / averageBlockTime
 
     function getRewards() {
       // TODO: Some subgraphs give sushiPerBlock & sushiPerSecond, and mcv2 gives nothing
@@ -108,7 +108,7 @@ export default function Farm(): JSX.Element {
       const rewardPerBlock = (pool.allocPoint / pool.owner.totalAllocPoint) * sushiPerBlock
 
       const defaultReward = {
-        token: 'SUSHI',
+        token: 'BGSP',
         icon: 'https://raw.githubusercontent.com/sushiswap/icons/master/token/sushi.jpg',
         rewardPerBlock,
         rewardPerDay: rewardPerBlock * blocksPerDay,
@@ -268,8 +268,8 @@ export default function Farm(): JSX.Element {
   return (
     <Container id="farm-page" className="grid h-full grid-cols-4 py-4 mx-auto md:py-8 lg:py-12 gap-9" maxWidth="7xl">
       <Head>
-        <title>Farm | Sushi</title>
-        <meta key="description" name="description" content="Farm SUSHI" />
+        <title>Big Farm | Big  Swap</title>
+        <meta key="description" name="description" content="Farm BGSP" />
       </Head>
       <div className={classNames('sticky top-0 hidden lg:block md:col-span-1')} style={{ maxHeight: '40rem' }}>
         <Menu positionsLength={positions.length} />
