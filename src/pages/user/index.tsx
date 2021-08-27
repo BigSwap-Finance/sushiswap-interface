@@ -81,8 +81,8 @@ export default function Me() {
               <User strokeWidth={1} size={34} className="text-white" />
             </div>
             <div className="ml-3">
-              <div className="font-semibold text-gray-300">{account && shortenAddress(account)}</div>
-              <div className="text-sm text-gray-500">
+              <div className="font-semibold text-white-300">{account && shortenAddress(account)}</div>
+              <div className="text-sm text-white-500">
                 {account && chainId && (
                   <>
                     {userEthBalance ? (
