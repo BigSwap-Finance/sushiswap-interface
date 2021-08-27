@@ -49,11 +49,11 @@ function Pair() {
   return (
     <>
       <Head>
-        <title>{i18n._(t`Borrow ${pair?.asset?.symbol}-${pair?.collateral?.symbol}`)} | Sushi</title>
+        <title>{i18n._(t`Borrow ${pair?.asset?.symbol}-${pair?.collateral?.symbol}`)} | Big Swap</title>
         <meta
           key="description"
           name="description"
-          content={`Borrow ${pair?.asset?.symbol} against ${pair?.collateral?.symbol} collateral on Kashi by Sushi`}
+          content={`Borrow ${pair?.asset?.symbol} against ${pair?.collateral?.symbol} collateral on Big Vault by Big Swap`}
         />
       </Head>
       <Card
@@ -229,7 +229,7 @@ const PairLayout = ({ children }) => {
             </div>
 
             <div className="flex justify-between pt-3">
-              <div className="text-xl text-high-emphesis">{i18n._(t`BentoBox`)}</div>
+              <div className="text-xl text-high-emphesis">{i18n._(t`Big Bank`)}</div>
             </div>
             <div className="flex justify-between">
               <div className="text-lg text-secondary">{i18n._(t`${pair?.collateral.tokenInfo.symbol} Strategy`)}</div>
@@ -237,7 +237,7 @@ const PairLayout = ({ children }) => {
                 {i18n._(t`None`)}
                 <QuestionHelper
                   text={i18n._(
-                    t`BentoBox strategies can create yield for your collateral tokens. This token does not yet have a strategy in the BentoBox.`
+                    t`Big Bank strategies can create yield for your collateral tokens. This token does not yet have a strategy in the Big Bank.`
                   )}
                 />
               </div>
