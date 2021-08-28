@@ -453,7 +453,7 @@ export default function Swap() {
       />
       <img src="./public/Bigswap-logo.svg" id="center-logo" width="400" alt="logo"/>  
       <img src="./logo.png" id="center-logo" width="400" alt="logo"/>                                                    
-      <DoubleGlowShadow/>
+      <DoubleGlowShadow>
         <div className="p-4 space-y-4 rounded bg-dark-900 z-1">
           <SwapHeader
             input={currencies[Field.INPUT]}
