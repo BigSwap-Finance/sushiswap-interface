@@ -97,7 +97,7 @@ export default function Pool() {
         />
       </Head>
       
-      <img src="./images/logo7.png" id="center-logo" width="900" alt="logo"/>                                                   
+      <img src="./logo7.png" id="center-logo" width="900" alt="logo"/>                                                   
       <div className="p-4 mb-3 space-y-3">
         <Back />
 
