@@ -34,17 +34,6 @@ export const SUPPORTED_NETWORKS: {
     rpcUrls: ['https://mainnet.infura.io/v3'],
     blockExplorerUrls: ['https://etherscan.com'],
   },
-  [ChainId.FANTOM]: {
-    chainId: '0xfa',
-    chainName: 'Fantom',
-    nativeCurrency: {
-      name: 'Fantom',
-      symbol: 'FTM',
-      decimals: 18,
-    },
-    rpcUrls: ['https://rpcapi.fantom.network'],
-    blockExplorerUrls: ['https://ftmscan.com'],
-  },
   [ChainId.BSC]: {
     chainId: '0x38',
     chainName: 'Binance Smart Chain',
@@ -67,99 +56,6 @@ export const SUPPORTED_NETWORKS: {
     rpcUrls: ['https://rpc-mainnet.maticvigil.com'], // ['https://matic-mainnet.chainstacklabs.com/'],
     blockExplorerUrls: ['https://explorer-mainnet.maticvigil.com'],
   },
-  [ChainId.HECO]: {
-    chainId: '0x80',
-    chainName: 'Heco',
-    nativeCurrency: {
-      name: 'Heco Token',
-      symbol: 'HT',
-      decimals: 18,
-    },
-    rpcUrls: ['https://http-mainnet.hecochain.com'],
-    blockExplorerUrls: ['https://hecoinfo.com'],
-  },
-  [ChainId.XDAI]: {
-    chainId: '0x64',
-    chainName: 'xDai',
-    nativeCurrency: {
-      name: 'xDai Token',
-      symbol: 'xDai',
-      decimals: 18,
-    },
-    rpcUrls: ['https://rpc.xdaichain.com'],
-    blockExplorerUrls: ['https://blockscout.com/poa/xdai'],
-  },
-  [ChainId.HARMONY]: {
-    chainId: '0x63564C40',
-    chainName: 'Harmony',
-    nativeCurrency: {
-      name: 'One Token',
-      symbol: 'ONE',
-      decimals: 18,
-    },
-    rpcUrls: [
-      'https://api.harmony.one',
-      'https://s1.api.harmony.one',
-      'https://s2.api.harmony.one',
-      'https://s3.api.harmony.one',
-    ],
-    blockExplorerUrls: ['https://explorer.harmony.one/'],
-  },
-  [ChainId.AVALANCHE]: {
-    chainId: '0xA86A',
-    chainName: 'Avalanche',
-    nativeCurrency: {
-      name: 'Avalanche Token',
-      symbol: 'AVAX',
-      decimals: 18,
-    },
-    rpcUrls: ['https://api.avax.network/ext/bc/C/rpc'],
-    blockExplorerUrls: ['https://cchain.explorer.avax.network'],
-  },
-  [ChainId.OKEX]: {
-    chainId: '0x42',
-    chainName: 'OKEx',
-    nativeCurrency: {
-      name: 'OKEx Token',
-      symbol: 'OKT',
-      decimals: 18,
-    },
-    rpcUrls: ['https://exchainrpc.okex.org'],
-    blockExplorerUrls: ['https://www.oklink.com/okexchain'],
-  },
-  [ChainId.ARBITRUM]: {
-    chainId: '0xA4B1',
-    chainName: 'Arbitrum',
-    nativeCurrency: {
-      name: 'Ethereum',
-      symbol: 'ETH',
-      decimals: 18,
-    },
-    rpcUrls: ['https://arb1.arbitrum.io/rpc'],
-    blockExplorerUrls: ['https://mainnet-arb-explorer.netlify.app'],
-  },
-  [ChainId.CELO]: {
-    chainId: '0xA4EC',
-    chainName: 'Celo',
-    nativeCurrency: {
-      name: 'Celo',
-      symbol: 'CELO',
-      decimals: 18,
-    },
-    rpcUrls: ['https://forno.celo.org'],
-    blockExplorerUrls: ['https://explorer.celo.org'],
-  },
-  [ChainId.PALM]: {
-    chainId: '0x2A15C308D',
-    chainName: 'Palm',
-    nativeCurrency: {
-      name: 'Palm',
-      symbol: 'PALM',
-      decimals: 18,
-    },
-    rpcUrls: ['https://palm-mainnet.infura.io/v3/da5fbfafcca14b109e2665290681e267'],
-    blockExplorerUrls: ['https://explorer.palm.io'],
-  },
 }
 
 export default function NetworkModal(): JSX.Element | null {
@@ -181,16 +77,7 @@ export default function NetworkModal(): JSX.Element | null {
         {[
           ChainId.MAINNET,
           ChainId.MATIC,
-          ChainId.FANTOM,
-          // ChainId.ARBITRUM,
-          ChainId.OKEX,
-          ChainId.HECO,
           ChainId.BSC,
-          ChainId.XDAI,
-          ChainId.HARMONY,
-          ChainId.AVALANCHE,
-          ChainId.CELO,
-          ChainId.PALM,
         ].map((key: ChainId, i: number) => {
           if (chainId === key) {
             return (
