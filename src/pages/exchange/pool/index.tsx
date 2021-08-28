@@ -96,7 +96,8 @@ export default function Pool() {
           content="BigSwap liquidity pools are markets for trades between the two tokens, you can provide these tokens and become a liquidity provider to earn 0.25% of fees from trades."
         />
       </Head>
-
+      
+      <img src="./images/logo7.png" id="center-logo" width="900" alt="logo"/>                                                   
       <div className="p-4 mb-3 space-y-3">
         <Back />
 
@@ -146,7 +147,7 @@ export default function Pool() {
           <div className={classNames('grid gap-4', migrationSupported ? 'grid-cols-3' : 'grid-cols-2')}>
             <Button
               id="add-pool-button"
-              color="gradient"
+              color="blue"
               className="grid items-center justify-center grid-flow-col gap-2 whitespace-nowrap"
               onClick={() => router.push(`/add/${currencyId(NATIVE[chainId])}`)}
             >
