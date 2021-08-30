@@ -61,10 +61,9 @@ export const PROTOCOL_FEE = BigNumber.from('10000') // 10%
 
 export const PROTOCOL_FEE_DIVISOR = BigNumber.from('100000')
 
+// export const BENTOBOX_ADDRESS = '0xF5BCE5077908a1b7370B9ae04AdC565EBd643966'
 
-export const BENTOBOX_ADDRESS: {
-  [chainId in ChainId]: string
-} = {
+export const BENTOBOX_ADDRESS = {
   [ChainId.MAINNET]: '0xF5BCE5077908a1b7370B9ae04AdC565EBd643966',
   [ChainId.ROPSTEN]: '0xF5BCE5077908a1b7370B9ae04AdC565EBd643966',
   [ChainId.RINKEBY]: '0xF5BCE5077908a1b7370B9ae04AdC565EBd643966',
@@ -76,9 +75,7 @@ export const BENTOBOX_ADDRESS: {
   [ChainId.BSC_TESTNET]: '0xF5BCE5077908a1b7370B9ae04AdC565EBd643966',
 }
 
-export const KASHI_ADDRESS: {
-  [chainId in ChainId]: string
-} = {
+export const KASHI_ADDRESS = {
   [ChainId.MAINNET]: '0x2cBA6Ab6574646Badc84F0544d05059e57a5dc42',
   [ChainId.ROPSTEN]: '',
   [ChainId.RINKEBY]: '',
@@ -92,9 +89,7 @@ export const KASHI_ADDRESS: {
 
 // export const KASHI_ADDRESS = '0x2cBA6Ab6574646Badc84F0544d05059e57a5dc42'
 
-export const SUSHISWAP_SWAPPER_ADDRESS: {
-  [chainId in ChainId]: string
-} = {
+export const SUSHISWAP_SWAPPER_ADDRESS = {
   [ChainId.MAINNET]: '0x1766733112408b95239aD1951925567CB1203084',
   [ChainId.ROPSTEN]: '',
   [ChainId.RINKEBY]: '',
@@ -106,9 +101,7 @@ export const SUSHISWAP_SWAPPER_ADDRESS: {
   [ChainId.BSC_TESTNET]: '',
 }
 
-export const SUSHISWAP_MULTISWAPPER_ADDRESS: {
-  [chainId in ChainId]: string
-} = {
+export const SUSHISWAP_MULTISWAPPER_ADDRESS = {
   [ChainId.MAINNET]: '0x545820d5Cc05248da112419fEfb18522c63C8e12',
   [ChainId.ROPSTEN]: '',
   [ChainId.RINKEBY]: '',
