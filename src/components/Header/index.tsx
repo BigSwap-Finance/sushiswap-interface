@@ -33,7 +33,7 @@ function AppBar(): JSX.Element {
     <header className="flex-shrink-0 w-full">
       <Popover as="nav" className="z-10 w-full bg-transparent header-border-b">
         {({ open }) => (
-          >
+          
             <div className="px-4 py-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
