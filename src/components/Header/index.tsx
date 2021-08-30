@@ -107,10 +107,20 @@ function AppBar(): JSX.Element {
                           </a>
                         </NavLink>
                       )}
+                      {chainId && featureEnabled(Feature.MEOWSHI, chainId) && (
+                        <NavLink href={'/tools/meowshi'}>
+                          <a
+                            id=1,
+                            className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                          >
+                            {i18n._(t`Redenominate xBGSP into MEOWSHI`)}
+                          </a>
+                        </NavLink>
+                      )} 
                     </div>
                   </div>
                 </div>
-
+                               
                 <div className="fixed bottom-0 left-0 z-10 flex flex-row items-center justify-center w-full p-4 lg:w-auto bg-dark-1000 lg:relative lg:p-0 lg:bg-transparent">
                   <div className="flex items-center justify-between w-full space-x-2 sm:justify-end">
                     {chainId && [ChainId.MAINNET].includes(chainId) && library && library.provider.isMetaMask && (
@@ -337,6 +347,17 @@ function AppBar(): JSX.Element {
                     </a>
                   </Link>
                 )}
+                
+                  {chainId && featureEnabled(Feature.MEOWSHI, chainId) && (
+                        <NavLink href={'/tools/meowshi'}>
+                          <a
+                            id=1,
+                            className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                          >
+                            {i18n._(t`Redenominate xBGSP into MEOWSHI`)}
+                    </a>
+                  </Link>
+                )}  
 
                 {chainId && featureEnabled(Feature.ANALYTICS, chainId) && (
                   <ExternalLink
