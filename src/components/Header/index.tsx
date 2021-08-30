@@ -348,13 +348,13 @@ function AppBar(): JSX.Element {
                   </Link>
                 )}
                 
-                  {chainId && featureEnabled(Feature.MEOWSHI, chainId) && (
-                        <NavLink href={'/tools/meowshi'}>
+                {chainId && featureEnabled(Feature.MEOWSHI, chainId) && (
+                        <Link href={'/tools/meowshi'}>
                           <a
                             id=1,
                             className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
                           >
-                            {i18n._(t`Redenominate xBGSP into MEOWSHI`)}
+                      {i18n._(t`Redenominate xBGSP into MEOWSHI`)}
                     </a>
                   </Link>
                 )}  
