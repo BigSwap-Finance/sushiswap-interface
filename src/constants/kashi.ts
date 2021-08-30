@@ -61,7 +61,6 @@ export const PROTOCOL_FEE = BigNumber.from('10000') // 10%
 
 export const PROTOCOL_FEE_DIVISOR = BigNumber.from('100000')
 
-// export const BENTOBOX_ADDRESS = '0xF5BCE5077908a1b7370B9ae04AdC565EBd643966'
 
 export const BENTOBOX_ADDRESS: {
   [chainId in ChainId]: string
