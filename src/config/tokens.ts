@@ -207,16 +207,6 @@ type ChainTokenMap = {
   readonly [chainId in ChainId]?: Token
 }
 
-// BGSP
-export const BGSP: ChainTokenMap = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, BGSP_ADDRESS[ChainId.MAINNET], 18, 'BGSP', 'BigSwapToken'),
-  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, BGSP_ADDRESS[ChainId.ROPSTEN], 18, 'BGSP', 'BigSwapToken'),
-  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, BGSP_ADDRESS[ChainId.RINKEBY], 18, 'BGSP', 'BigSwapToken'),
-  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, BGSP_ADDRESS[ChainId.GÖRLI], 18, 'BGSP', 'BigSwapToken'),
-  [ChainId.KOVAN]: new Token(ChainId.KOVAN, BGSP_ADDRESS[ChainId.KOVAN], 18, 'BGSP', 'BigSwapToken'),
-  [ChainId.MATIC]: new Token(ChainId.MATIC, BGSP_ADDRESS[ChainId.MATIC], 18, 'BGSP', 'BigSwapToken'),
-  [ChainId.BSC]: new Token(ChainId.BSC, BGSP_ADDRESS[ChainId.BSC], 18, 'BGSP', 'BigSwapToken'),
-}
 
 // SUSHI
 export const SUSHI: ChainTokenMap = {
