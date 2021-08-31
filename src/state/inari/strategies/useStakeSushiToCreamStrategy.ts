@@ -13,15 +13,15 @@ import { useLingui } from '@lingui/react'
 import { useTokenBalances } from '../../wallet/hooks'
 
 export const GENERAL = (i18n: I18n): StrategyGeneralInfo => ({
-  name: i18n._(t`SUSHI → Cream`),
-  steps: [i18n._(t`SUSHI`), i18n._(t`xSUSHI`), i18n._(t`Cream`)],
+  name: i18n._(t`BGSP → Cream`),
+  steps: [i18n._(t`BGSP`), i18n._(t`xBGSP`), i18n._(t`Cream`)],
   zapMethod: 'stakeSushiToCream',
   unzapMethod: 'unstakeSushiFromCream',
   description: i18n._(
-    t`Stake SUSHI for xSUSHI and deposit into Cream in one click. xSUSHI in Cream (crXSUSHI) can be lent or used as collateral for borrowing.`
+    t`Stake BGSP for xBGSP and deposit into Cream in one click. xBGSP in Cream (crXBGSP) can be lent or used as collateral for borrowing.`
   ),
-  inputSymbol: i18n._(t`SUSHI`),
-  outputSymbol: i18n._(t`xSUSHI in Cream`),
+  inputSymbol: i18n._(t`BGSP`),
+  outputSymbol: i18n._(t`xBGSP in Cream`),
 })
 
 export const tokenDefinitions: StrategyTokenDefinitions = {
