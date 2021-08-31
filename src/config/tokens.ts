@@ -171,6 +171,8 @@ export const WBTC = new Token(ChainId.MAINNET, '0x2260FAC5E5542a773Aa44fBCfeDf7C
 
 export const XSUSHI = new Token(ChainId.MAINNET, '0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272', 18, 'xSUSHI', 'SushiBar')
 
+export const BGSP = new Token(ChainId.MAINNET, '0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272', 18, 'BGSP', 'BigBar')
+
 export const XBGSP = new Token(ChainId.MAINNET, '0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272', 18, 'xBGSP', 'BigBar')
 
 export const LIFT = new Token(ChainId.MAINNET, '0xf9209d900f7ad1DC45376a2caA61c78f6dEA53B6', 18, 'LIFT', 'LiftKitchen')
@@ -203,6 +205,17 @@ export const DPI = new Token(ChainId.MAINNET, '0x1494CA1F11D487c2bBe4543E90080Ae
 
 type ChainTokenMap = {
   readonly [chainId in ChainId]?: Token
+}
+
+// BGSP
+export const BGSP: ChainTokenMap = {
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, BGSP_ADDRESS[ChainId.MAINNET], 18, 'BGSP', 'BigSwapToken'),
+  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, BGSP_ADDRESS[ChainId.ROPSTEN], 18, 'BGSP', 'BigSwapToken'),
+  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, BGSP_ADDRESS[ChainId.RINKEBY], 18, 'BGSP', 'BigSwapToken'),
+  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, BGSP_ADDRESS[ChainId.GÖRLI], 18, 'BGSP', 'BigSwapToken'),
+  [ChainId.KOVAN]: new Token(ChainId.KOVAN, BGSP_ADDRESS[ChainId.KOVAN], 18, 'BGSP', 'BigSwapToken'),
+  [ChainId.MATIC]: new Token(ChainId.MATIC, BGSP_ADDRESS[ChainId.MATIC], 18, 'BGSP', 'BigSwapToken'),
+  [ChainId.BSC]: new Token(ChainId.BSC, BGSP_ADDRESS[ChainId.BSC], 18, 'BGSP', 'BigSwapToken'),
 }
 
 // SUSHI
