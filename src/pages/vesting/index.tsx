@@ -231,7 +231,7 @@ export default function Vesting() {
               </div>
               <div className="p-4 rounded bg-dark-800">
                 <div className="flex flex-col gap-1">
-                  <div className="font-bold text-white">{i18n._(t`Deposit BGSP into BentoBox`)}</div>
+                  <div className="font-bold text-white">{i18n._(t`Deposit BGSP into Big Bank`)}</div>
                   <div className="text-sm text-secondary">
                     {t`(COMING SOON) Accrue automatic yield through flash loans and
                                                             BGSP strategies`}
