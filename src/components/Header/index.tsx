@@ -127,6 +127,16 @@ function AppBar(): JSX.Element {
                           </a>
                         </Link>
                       )} 
+                     {chainId === ChainId.MAINNET && (
+                        <Link href={'/tools/inari'}>
+                          <a
+                            id={`stake-nav-link`}
+                            className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                          >
+                            {i18n._(t`Inari`)}
+                          </a>
+                        </Link>
+                      )}  
                     </div>
                   </div>
                 </div>
