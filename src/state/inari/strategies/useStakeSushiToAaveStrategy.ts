@@ -11,15 +11,15 @@ import { useLingui } from '@lingui/react'
 import { useTokenBalances } from '../../wallet/hooks'
 
 export const GENERAL = (i18n: I18n): StrategyGeneralInfo => ({
-  name: i18n._(t`SUSHI → Aave`),
-  steps: [i18n._(t`SUSHI`), i18n._(t`xSUSHI`), i18n._(t`Aave`)],
+  name: i18n._(t`BGSP → Aave`),
+  steps: [i18n._(t`BGSP`), i18n._(t`xBGSP`), i18n._(t`Aave`)],
   zapMethod: 'stakeSushiToAave',
   unzapMethod: 'unstakeSushiFromAave',
   description: i18n._(
-    t`Stake SUSHI for xSUSHI and deposit into Aave in one click. xSUSHI in Aave (aXSUSHI) can be lent or used as collateral for borrowing.`
+    t`Stake BGSP for xBGSP and deposit into Aave in one click. xBGSP in Aave (aXBGSP) can be lent or used as collateral for borrowing.`
   ),
-  inputSymbol: i18n._(t`SUSHI`),
-  outputSymbol: i18n._(t`xSUSHI in Aave`),
+  inputSymbol: i18n._(t`BGSP`),
+  outputSymbol: i18n._(t`xBGSP in Aave`),
 })
 
 export const tokenDefinitions: StrategyTokenDefinitions = {
