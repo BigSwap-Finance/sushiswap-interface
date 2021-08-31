@@ -22,30 +22,30 @@ const HeaderToggle: FC<HeaderToggleProps> = ({ meowshiState }) => {
         <RadioGroup.Option
           value={true}
           className={({ checked }) =>
-            classNames('px-8 py-2 rounded', `${checked ? 'bg-gradient-to-r from-blue to-white' : ''}`)
+            classNames('px-8 py-2 rounded', `${checked ? 'bg-gradient-to-r from-blue to-blue' : ''}`)
           }
         >
           {({ checked }) => (
             <Typography weight={checked ? 700 : 400} className={`${checked ? 'text-high-emphesis' : 'text-secondary'}`}>
-              Meow
+              Bank
             </Typography>
           )}
         </RadioGroup.Option>
         <RadioGroup.Option
           value={false}
           className={({ checked }) =>
-            classNames('px-8 py-2 rounded', `${checked ? 'bg-gradient-to-r from-blue to-white' : ''}`)
+            classNames('px-8 py-2 rounded', `${checked ? 'bg-gradient-to-r from-blue to-blue' : ''}`)
           }
         >
           {({ checked }) => (
             <Typography weight={checked ? 700 : 400} className={`${checked ? 'text-high-emphesis' : 'text-secondary'}`}>
-              Un-Meow
+              Un-Bank
             </Typography>
           )}
         </RadioGroup.Option>
       </RadioGroup>
-      <div className="my-1.5 items-center flex border-gradient-r-blue-pink-dark-pink-red border-transparent border-solid border rounded-3xl px-4 md:px-3.5 py-1.5 md:py-0.5 text-high-emphesis text-xs font-medium md:text-base md:font-normal">
-        1 xSUSHI ≈ 100k MEOW
+      <div className="my-1.5 items-center flex border-gradient-r-blue-blue-blue-blue-blue border-transparent border-solid border rounded-3xl px-4 md:px-3.5 py-1.5 md:py-0.5 text-high-emphesis text-xs font-medium md:text-base md:font-normal">
+        1 xBGSP ≈ 100k BANK
       </div>
     </div>
   )
