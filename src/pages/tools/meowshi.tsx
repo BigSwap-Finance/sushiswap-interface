@@ -1,6 +1,6 @@
 import { ArrowDownIcon, InformationCircleIcon } from '@heroicons/react/solid'
 import { ChainId, Currency, Token } from '@sushiswap/sdk'
-import { MEOW, SUSHI, XSUSHI } from '../../config/tokens'
+import { BANK, BGSP, XBGSP, MEOW, SUSHI, XSUSHI } from '../../config/tokens'
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 
 import Container from '../../components/Container'
@@ -58,11 +58,11 @@ export default function Meowshi() {
     async (val, field) => {
       setFields((prevState) => {
         const inputRate =
-          currencies[Field.INPUT] === XSUSHI
+          currencies[Field.INPUT] === XBGSP
             ? meowshiPerXSushi.mul(e10(5))
             : meowshiPerXSushi.mul(e10(5)).mulDiv(e10(18), sushiPerXSushi.toString().toBigNumber(18))
         const outputRate =
-          currencies[Field.OUTPUT] === XSUSHI
+          currencies[Field.OUTPUT] === XBGSP
             ? xSushiPerMeowshi.div(e10(5))
             : xSushiPerMeowshi.mulDiv(sushiPerXSushi.toString().toBigNumber(18), e10(18)).div(e10(5))
 
@@ -124,7 +124,7 @@ export default function Meowshi() {
       setCurrency,
       switchCurrencies,
       fields,
-      meow: currencies[Field.OUTPUT]?.symbol === 'MEOW',
+      meow: currencies[Field.OUTPUT]?.symbol === 'BANK',
       handleInput,
     }),
     [currencies, fields, handleInput, setCurrency, switchCurrencies]
