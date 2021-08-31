@@ -40,7 +40,7 @@ function AppBar(): JSX.Element {
                   <Image src="/logo.png" alt="Sushi" width="48px" height="48px" />
                   <div className="hidden sm:block sm:ml-4">
                     <div className="flex space-x-2">
-                      {/* <Buy /> */}
+                        {<Buy />}
                       <NavLink href="/swap">
                         <a
                           id={`swap-nav-link`}
@@ -128,12 +128,22 @@ function AppBar(): JSX.Element {
                         </Link>
                       )} 
                      {chainId === ChainId.MAINNET && (
-                        <Link href={'/tools/inari'}>
+                        <Link href={'/inari'}>
                           <a
                             id={`stake-nav-link`}
                             className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
                           >
                             {i18n._(t`Inari`)}
+                          </a>
+                        </Link>
+                      )}
+                       {chainId === ChainId.MAINNET && (
+                        <Link href={'/vesting'}>
+                          <a
+                            id={`stake-nav-link`}
+                            className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                          >
+                            {i18n._(t`Vesting`)}
                           </a>
                         </Link>
                       )}  
