@@ -219,7 +219,7 @@ export const SUSHI: ChainTokenMap = {
   // [ChainId.ARBITRUM]: new Token(ChainId.ARBITRUM, SUSHI_ADDRESS[ChainId.ARBITRUM], 18, 'SUSHI', 'SushiToken'),
   [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, SUSHI_ADDRESS[ChainId.AVALANCHE], 18, 'SUSHI', 'SushiToken'),
   [ChainId.OKEX]: new Token(ChainId.OKEX, SUSHI_ADDRESS[ChainId.OKEX], 18, 'SUSHI', 'SushiToken'),
-  [ChainId.HARMONY]: new Token(ChainId.HARMONY, SUSHI_ADDRES ghhyS[ChainId.HARMONY], 18, 'SUSHI', 'SushiToken'),
+  [ChainId.HARMONY]: new Token(ChainId.HARMONY, SUSHI_ADDRESS[ChainId.HARMONY], 18, 'SUSHI', 'SushiToken'),
   // [ChainId.HECO]: new Token(ChainId.HECO, SUSHI_ADDRESS[ChainId.HECO], 18, 'SUSHI', 'SushiToken'),
 }
 
