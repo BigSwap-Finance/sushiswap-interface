@@ -58,16 +58,16 @@ export default function Meowshi() {
     async (val, field) => {
       setFields((prevState) => {
         const inputRate =
-          currencies[Field.INPUT] === XBGSP
+          currencies[Field.INPUT] === XSUSHI
             ? meowshiPerXSushi.mul(e10(5))
             : meowshiPerXSushi.mul(e10(5)).mulDiv(e10(18), sushiPerXSushi.toString().toBigNumber(18))
         const outputRate =
-          currencies[Field.OUTPUT] === XBGSP
+          currencies[Field.OUTPUT] === XSUSHI
             ? xSushiPerMeowshi.div(e10(5))
             : xSushiPerMeowshi.mulDiv(sushiPerXSushi.toString().toBigNumber(18), e10(18)).div(e10(5))
 
         if (field === Field.INPUT) {
-          if (currencies[Field.OUTPUT] === BANK) {
+          if (currencies[Field.OUTPUT] === MEOW) {
             return {
               independentField: Field.INPUT,
               [Field.INPUT]: val || prevState[Field.INPUT],
@@ -81,7 +81,7 @@ export default function Meowshi() {
             }
           }
         } else {
-          if (currencies[Field.OUTPUT] === BANK) {
+          if (currencies[Field.OUTPUT] === MEOW) {
             return {
               independentField: Field.OUTPUT,
               [Field.INPUT]: (val || prevState[Field.OUTPUT]).toBigNumber(18).mulDiv(e10(18), inputRate)?.toFixed(18),
@@ -124,7 +124,7 @@ export default function Meowshi() {
       setCurrency,
       switchCurrencies,
       fields,
-      meow: currencies[Field.OUTPUT]?.symbol === 'BANK',
+      meow: currencies[Field.OUTPUT]?.symbol === 'MEOW',
       handleInput,
     }),
     [currencies, fields, handleInput, setCurrency, switchCurrencies]
