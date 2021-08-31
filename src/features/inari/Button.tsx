@@ -76,7 +76,7 @@ const InariButton: FC<InariButtonProps> = ({ children, ...rest }) => {
   if (approveCallback && approveCallback[0] === ApprovalState.NOT_APPROVED)
     return (
       <>
-        <Button {...rest} color="pink" onClick={approveCallback[1]}>
+        <Button {...rest} color="blue" onClick={approveCallback[1]}>
           {i18n._(t`Approve Inari to spend ${approveCallback[2].currency.symbol}`)}
         </Button>
         {approveFlow}
@@ -96,7 +96,7 @@ const InariButton: FC<InariButtonProps> = ({ children, ...rest }) => {
   if (bentoApproveCallback && bentoApproveCallback.approvalState === BentoApprovalState.NOT_APPROVED)
     return (
       <>
-        <Button {...rest} color="pink" onClick={handleGetPermit}>
+        <Button {...rest} color="blue" onClick={handleGetPermit}>
           {i18n._(t`Approve Inari Master Contract`)}
         </Button>
         {approveFlow}
