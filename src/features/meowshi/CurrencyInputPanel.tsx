@@ -1,6 +1,6 @@
 import { Field, MeowshiState } from '../../pages/tools/meowshi'
 import React, { FC } from 'react'
-import { SUSHI, XSUSHI } from '../../config/tokens'
+import { SUSHI, XSUSHI, BGSP, XBGSP } from '../../config/tokens'
 
 import { ChainId } from '@sushiswap/sdk'
 import Image from 'next/image'
@@ -39,7 +39,7 @@ const CurrencyInputPanel: FC<CurrencyInputPanelProps> = ({ field, meowshiState, 
                 src={
                   currency === SUSHI[ChainId.MAINNET]
                     ? '/images/tokens/sushi-square.jpg'
-                    : currency === XSUSHI
+                    : currency === XBGSP
                     ? '/images/tokens/xsushi-square.jpg'
                     : '/images/tokens/nyan-square.jpg'
                 }
@@ -57,7 +57,7 @@ const CurrencyInputPanel: FC<CurrencyInputPanelProps> = ({ field, meowshiState, 
                   <Typography
                     variant="xs"
                     className="underline cursor-pointer text-blue"
-                    onClick={() => setCurrency(currency === XSUSHI ? SUSHI[ChainId.MAINNET] : XSUSHI, field)}
+                    onClick={() => setCurrency(currency === XSUSHI ? SUSHI[ChainId.MAINNET] : XBGSP, field)}
                   >
                     {currencies[field] === SUSHI[ChainId.MAINNET] ? i18n._(t`Use xBGSP`) : i18n._(t`Use BGSP`)}
                   </Typography>
