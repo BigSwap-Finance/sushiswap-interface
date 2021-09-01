@@ -1,6 +1,6 @@
 import { ArrowDownIcon, InformationCircleIcon } from '@heroicons/react/solid'
 import { ChainId, Currency, Token } from '@sushiswap/sdk'
-import { MEOW, SUSHI, XSUSHI } from '../../config/tokens'
+import { MEOW, SUSHI, XSUSHI, BANK, BGSP, XBGSP } from '../../config/tokens'
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 
 import Container from '../../components/Container'
@@ -51,7 +51,7 @@ export default function Meowshi() {
 
   const [currencies, setCurrencies] = useState({
     [Field.INPUT]: SUSHI[ChainId.MAINNET],
-    [Field.OUTPUT]: MEOW,
+    [Field.OUTPUT]: BANK,
   })
 
   const handleInput = useCallback(
@@ -62,12 +62,12 @@ export default function Meowshi() {
             ? meowshiPerXSushi.mul(e10(5))
             : meowshiPerXSushi.mul(e10(5)).mulDiv(e10(18), sushiPerXSushi.toString().toBigNumber(18))
         const outputRate =
-          currencies[Field.OUTPUT] === XSUSHI
+          currencies[Field.OUTPUT] === XBGSP
             ? xSushiPerMeowshi.div(e10(5))
             : xSushiPerMeowshi.mulDiv(sushiPerXSushi.toString().toBigNumber(18), e10(18)).div(e10(5))
 
         if (field === Field.INPUT) {
-          if (currencies[Field.OUTPUT] === MEOW) {
+          if (currencies[Field.OUTPUT] === BANK) {
             return {
               independentField: Field.INPUT,
               [Field.INPUT]: val || prevState[Field.INPUT],
@@ -81,7 +81,7 @@ export default function Meowshi() {
             }
           }
         } else {
-          if (currencies[Field.OUTPUT] === MEOW) {
+          if (currencies[Field.OUTPUT] === BANK) {
             return {
               independentField: Field.OUTPUT,
               [Field.INPUT]: (val || prevState[Field.OUTPUT]).toBigNumber(18).mulDiv(e10(18), inputRate)?.toFixed(18),
