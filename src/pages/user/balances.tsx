@@ -63,7 +63,7 @@ function Balances() {
           <div className="grid grid-cols-3 px-4 text-sm select-none text-secondary">
             <div>{i18n._(t`Token`)}</div>
             <div className="text-right">{i18n._(t`Wallet`)}</div>
-            <div className="text-right">{i18n._(t`BentoBox`)}</div>
+            <div className="text-right">{i18n._(t`BigBank`)}</div>
           </div>
           {items &&
             items.length > 0 &&
@@ -82,9 +82,9 @@ const BalancesLayout = ({ children }) => {
         <Card
           className="h-full bg-dark-900"
           backgroundImage="bento-illustration.png"
-          title={i18n._(t`Deposit tokens into BentoBox for all the yields`)}
+          title={i18n._(t`Deposit tokens into BigBank for all the yields`)}
           description={i18n._(
-            t`BentoBox provides extra yield on deposits with flash lending, strategies, and fixed, low-gas transfers among integrated dapps, like Kashi markets`
+            t`BigBank provides extra yield on deposits with flash lending, strategies, and fixed, low-gas transfers among integrated dapps, like Vault markets`
           )}
         />
       }
@@ -271,7 +271,7 @@ function Withdraw({ token }: { token: BentoBalance & WrappedTokenInfo }): JSX.El
         {account && (
           <Button
             variant="outlined"
-            color="pink"
+            color="white"
             size="xs"
             onClick={() => {
               setValue(token.bentoBalance.toFixed(token?.tokenInfo ? token.tokenInfo.decimals : token?.decimals))
