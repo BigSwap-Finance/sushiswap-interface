@@ -67,7 +67,7 @@ export default function Meowshi() {
             : xSushiPerMeowshi.mulDiv(sushiPerXSushi.toString().toBigNumber(18), e10(18)).div(e10(5))
 
         if (field === Field.INPUT) {
-          if (currencies[Field.OUTPUT] === MEOW) {
+          if (currencies[Field.OUTPUT] === BANK) {
             return {
               independentField: Field.INPUT,
               [Field.INPUT]: val || prevState[Field.INPUT],
@@ -81,7 +81,7 @@ export default function Meowshi() {
             }
           }
         } else {
-          if (currencies[Field.OUTPUT] === MEOW) {
+          if (currencies[Field.OUTPUT] === BANK) {
             return {
               independentField: Field.OUTPUT,
               [Field.INPUT]: (val || prevState[Field.OUTPUT]).toBigNumber(18).mulDiv(e10(18), inputRate)?.toFixed(18),
