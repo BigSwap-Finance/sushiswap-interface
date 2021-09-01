@@ -271,7 +271,7 @@ function Withdraw({ token }: { token: BentoBalance & WrappedTokenInfo }): JSX.El
         {account && (
           <Button
             variant="outlined"
-            color="white"
+            color="pink"
             size="xs"
             onClick={() => {
               setValue(token.bentoBalance.toFixed(token?.tokenInfo ? token.tokenInfo.decimals : token?.decimals))
