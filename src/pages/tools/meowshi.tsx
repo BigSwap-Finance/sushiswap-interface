@@ -1,6 +1,6 @@
 import { ArrowDownIcon, InformationCircleIcon } from '@heroicons/react/solid'
 import { ChainId, Currency, Token } from '@sushiswap/sdk'
-import { BANK, BGSP, XBGSP, MEOW, SUSHI, XSUSHI } from '../../config/tokens'
+import { MEOW, SUSHI, XSUSHI } from '../../config/tokens'
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 
 import Container from '../../components/Container'
@@ -58,16 +58,16 @@ export default function Meowshi() {
     async (val, field) => {
       setFields((prevState) => {
         const inputRate =
-          currencies[Field.INPUT] === XBGSP
+          currencies[Field.INPUT] === XSUSHI
             ? meowshiPerXSushi.mul(e10(5))
             : meowshiPerXSushi.mul(e10(5)).mulDiv(e10(18), sushiPerXSushi.toString().toBigNumber(18))
         const outputRate =
-          currencies[Field.OUTPUT] === XBGSP
+          currencies[Field.OUTPUT] === XSUSHI
             ? xSushiPerMeowshi.div(e10(5))
             : xSushiPerMeowshi.mulDiv(sushiPerXSushi.toString().toBigNumber(18), e10(18)).div(e10(5))
 
         if (field === Field.INPUT) {
-          if (currencies[Field.OUTPUT] === BANK) {
+          if (currencies[Field.OUTPUT] === MEOW) {
             return {
               independentField: Field.INPUT,
               [Field.INPUT]: val || prevState[Field.INPUT],
@@ -81,7 +81,7 @@ export default function Meowshi() {
             }
           }
         } else {
-          if (currencies[Field.OUTPUT] === BANK) {
+          if (currencies[Field.OUTPUT] === MEOW) {
             return {
               independentField: Field.OUTPUT,
               [Field.INPUT]: (val || prevState[Field.OUTPUT]).toBigNumber(18).mulDiv(e10(18), inputRate)?.toFixed(18),
@@ -124,7 +124,7 @@ export default function Meowshi() {
       setCurrency,
       switchCurrencies,
       fields,
-      meow: currencies[Field.OUTPUT]?.symbol === 'BANK',
+      meow: currencies[Field.OUTPUT]?.symbol === 'MEOW',
       handleInput,
     }),
     [currencies, fields, handleInput, setCurrency, switchCurrencies]
@@ -139,7 +139,7 @@ export default function Meowshi() {
 
       <div className="z-0 relative mb-[-38px] md:mb-[-54px] ml-0 md:ml-4 flex justify-between gap-6 items-center">
         <div className="min-w-[168px] hidden md:block">
-          <Image src="/public/logo.png" alt="" width="168px" height="168px" />
+          <Image src="/logo.png" alt="" width="168px" height="168px" />
         </div>
 
         <div className="bg-[rgba(255,255,255,0.04)] p-4 py-2 rounded flex flex-row items-center gap-4 mb-[54px]">
@@ -164,7 +164,7 @@ export default function Meowshi() {
             {currencies[Field.INPUT]?.symbol} →{' '}
             {(currencies[Field.INPUT] === SUSHI[ChainId.MAINNET] ||
               currencies[Field.OUTPUT] === SUSHI[ChainId.MAINNET]) &&
-              ' xBGSP → '}
+              ' xSUSHI → '}
             {currencies[Field.OUTPUT]?.symbol}
           </Typography>
         </div>
