@@ -53,7 +53,7 @@ const CurrencyInputPanel: FC<CurrencyInputPanelProps> = ({ field, meowshiState, 
                 <Typography variant="h3" className="leading-6 text-high-emphesis" weight={700}>
                   {currency?.symbol}
                 </Typography>
-                {(currency === SUSHI[ChainId.MAINNET] || currency === XSUSHI) && (
+                {(currency === SUSHI[ChainId.MAINNET] || currency === XBGSP) && (
                   <Typography
                     variant="xs"
                     className="underline cursor-pointer text-blue"
