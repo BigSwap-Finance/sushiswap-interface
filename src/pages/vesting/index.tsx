@@ -165,7 +165,7 @@ export default function Vesting() {
               </div>
 
               <Button
-                color="gradient"
+                color="blue"
                 disabled={
                   !isAddress(account ?? '') ||
                   claimConfirmed ||
