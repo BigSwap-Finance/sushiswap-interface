@@ -99,7 +99,7 @@ const MeowshiButton: FC<MeowshiButtonProps> = ({ meowshiState }) => {
 
   if (!account)
     return (
-      <Button onClick={approve} color="gradient" disabled={true}>
+      <Button onClick={approve} color="blue" disabled={true}>
         {i18n._(t`Connect to wallet`)}
       </Button>
     )
