@@ -57,7 +57,7 @@ const CurrencyInputPanel: FC<CurrencyInputPanelProps> = ({ field, meowshiState, 
                   <Typography
                     variant="xs"
                     className="underline cursor-pointer text-blue"
-                    onClick={() => setCurrency(currency === XSUSHI ? SUSHI[ChainId.MAINNET] : XBGSP, field)}
+                    onClick={() => setCurrency(currency === XBGSP ? SUSHI[ChainId.MAINNET] : XBGSP, field)}
                   >
                     {currencies[field] === SUSHI[ChainId.MAINNET] ? i18n._(t`Use xBGSP`) : i18n._(t`Use BGSP`)}
                   </Typography>
