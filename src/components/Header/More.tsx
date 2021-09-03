@@ -13,7 +13,7 @@ const items = (i18n: I18n) => [
   {
     name: i18n._(t`Docs`),
     description: i18n._(t`Documentation for users of Sushi.`),
-    href: 'https://docs.sushi.com',
+    href: 'https://docs.bigswap.com',
     external: true,
   },
   {
@@ -25,14 +25,8 @@ const items = (i18n: I18n) => [
   {
     name: i18n._(t`Open Source`),
     description: i18n._(t`Sushi is a supporter of Open Source.`),
-    href: 'https://github.com/sushiswap',
+    href: 'https://github.com/bigswap-finance',
     external: true,
-  },
-  {
-    name: i18n._(t`Tools`),
-    description: i18n._(t`Tools to optimize your workflow.`),
-    href: '/tools',
-    external: false,
   },
   {
     name: i18n._(t`Discord`),
