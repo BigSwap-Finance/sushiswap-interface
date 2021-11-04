@@ -23,7 +23,7 @@ export const SUPPORTED_NETWORKS: {
     blockExplorerUrls: string[]
   }
 } = {
- /* [ChainId.MAINNET]: {
+   [ChainId.MAINNET]: {
     chainId: '0x1',
     chainName: 'Ethereum',
     nativeCurrency: {
@@ -32,7 +32,7 @@ export const SUPPORTED_NETWORKS: {
       decimals: 18,
     },
     rpcUrls: ['https://mainnet.infura.io/v3'],
-    blockExplorerUrls: ['https://etherscan.com'],*/
+    blockExplorerUrls: ['https://etherscan.com'],
   },
   [ChainId.BSC]: {
     chainId: '0x38',
@@ -75,7 +75,7 @@ export default function NetworkModal(): JSX.Element | null {
 
       <div className="grid grid-flow-row-dense grid-cols-1 gap-5 overflow-y-auto md:grid-cols-2">
         {[
-         /* ChainId.MAINNET,*/
+          ChainId.MAINNET,
           ChainId.MATIC,
           ChainId.BSC,
         ].map((key: ChainId, i: number) => {
