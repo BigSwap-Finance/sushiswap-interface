@@ -6,8 +6,8 @@ export default function Analytics() {
   return (
     <Container maxWidth="full" className="grid h-full grid-cols-4 mx-auto gap-9">
       <Head>
-        <title>Analytics Dashboard | Sushi</title>
-        <meta name="description" content="SUSHI Analytics Dashboard by Sushi..." />
+        <title>Analytics Dashboard | BigSwap</title>
+        <meta name="description" content="BigSwap Analytics Dashboard by BigSwap..." />
       </Head>
 
       <div className="sticky top-0 hidden lg:block md:col-span-1" style={{ maxHeight: '40rem' }}>
