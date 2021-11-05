@@ -12,33 +12,33 @@ import NavLink from '../NavLink'
 const items = (i18n: I18n) => [
   {
     name: i18n._(t`Docs`),
-    description: i18n._(t`Documentation for users of Sushi.`),
+    description: i18n._(t`Documentation for users of BigSwap.`),
     href: 'https://docs.bigswap.com',
     external: true,
   },
   {
-    name: i18n._(t`Dev`),
-    description: i18n._(t`Documentation for developers of Sushi.`),
-    href: 'https://dev.sushi.com',
+    name: i18n._(t`Twitter`),
+    description: i18n._(t`Follow Us On Twitter.`),
+    href: 'https://twitter.com/bigswapfinance',
     external: true,
   },
   {
     name: i18n._(t`Open Source`),
-    description: i18n._(t`Sushi is a supporter of Open Source.`),
+    description: i18n._(t`BigSwap is a supporter of Open Source.`),
     href: 'https://github.com/bigswap-finance',
     external: true,
   },
   {
     name: i18n._(t`Discord`),
     description: i18n._(t`Join the community on Discord.`),
-    href: 'https://discord.gg/NVPXN4e',
+    href: 'https://discord.gg/MuNR9eQUnG',
     external: true,
   },
   {
-    name: i18n._(t`Vesting`),
-    description: i18n._(t`Weekly unlocks from the vesting period.`),
-    href: '/vesting',
-    external: false,
+    name: i18n._(t`Telegram`),
+    description: i18n._(t`Join the community on Telegram.`),
+    href: 'https://t.me/BigSwapCommunity',
+    external: true,
   },
 ]
 
