@@ -58,12 +58,12 @@ function AppBar(): JSX.Element {
                         </a>
                       </NavLink>
                       {chainId && featureEnabled(Feature.MIGRATE, chainId) && (
-                        <NavLink href={'/migrate'}>
+                        <NavLink href={'https://bigswap.xyz'}>
                           <a
                             id={`migrate-nav-link`}
                             className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
                           >
-                            {i18n._(t`Migrate`)}
+                            {i18n._(t`Wallet`)}
                           </a>
                         </NavLink>
                       )}
