@@ -80,7 +80,7 @@ export default function Bar() {
         ],
       },
       {
-        labels: ['Sushi Staked (USD)', 'Sushi Harvested (USD)'],
+        labels: ['BGSP Staked (USD)', 'BGSP Harvested (USD)'],
         note: '/ day',
         data: [
           data.map((d) => ({
@@ -94,7 +94,7 @@ export default function Bar() {
         ],
       },
       {
-        title: 'xSushi Total Supply',
+        title: 'xBGSP Total Supply',
         data: [
           data.map((d) => ({
             date: d.date * 1000,
@@ -112,8 +112,8 @@ export default function Bar() {
       <div className="flex flex-row space-x-4 overflow-auto">
         <InfoCard text="APY (24h)" number={formatPercent(APY1d)} />
         <InfoCard text="APY (7d)" number={formatPercent(APY1w)} />
-        <InfoCard text="xSUSHI in Circulation" number={formatNumber(bar?.totalSupply)} />
-        <InfoCard text="xSUSHI : SUSHI" number={Number(bar?.ratio ?? 0)?.toFixed(4)} />
+        <InfoCard text="xBGSP in Circulation" number={formatNumber(bar?.totalSupply)} />
+        <InfoCard text="xBGSP : BGSP" number={Number(bar?.ratio ?? 0)?.toFixed(4)} />
       </div>
       <div className="space-y-4">
         {graphs.map((graph, i) => (
